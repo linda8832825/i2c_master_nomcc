@@ -19783,8 +19783,8 @@ uint8_t I2C_Master_Read(uint8_t get);
 void main(void) {
     init();
     I2C_Master_Start();
-    I2C_Master_Write((0x50 << 1)|0);
-    I2C_Master_Write(0xAA);
+    I2C_Master_Write((0x3A << 1)|0);
+    I2C_Master_Write(0xDB);
     I2C_Master_Stop();
     while(1);
 }

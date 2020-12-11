@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.20 build 20200408173844 
-                                                                                               Thu Dec 10 16:37:03 2020
+                                                                                               Fri Dec 11 16:30:40 2020
 
 Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1 
      1                           	processor	16F18854
@@ -2309,12 +2309,12 @@ Microchip MPLAB XC8 C Compiler v2.20 (Free license) build 20200408173844 Og1
   2295                           ;main.c: 10:     I2C_Master_Start();
   2296  07BA  3187  2768  3187   	fcall	_I2C_Master_Start
   2297                           
-  2298                           ;main.c: 11:     I2C_Master_Write((0x50 << 1)|0);
-  2299  07BD  30A0               	movlw	160
+  2298                           ;main.c: 11:     I2C_Master_Write((0x3A << 1)|0);
+  2299  07BD  3074               	movlw	116
   2300  07BE  3187  27A9  3187   	fcall	_I2C_Master_Write
   2301                           
-  2302                           ;main.c: 12:     I2C_Master_Write(0xAA);
-  2303  07C1  30AA               	movlw	170
+  2302                           ;main.c: 12:     I2C_Master_Write(0xDB);
+  2303  07C1  30DB               	movlw	219
   2304  07C2  3187  27A9  3187   	fcall	_I2C_Master_Write
   2305                           
   2306                           ;main.c: 13:     I2C_Master_Stop();
@@ -3182,7 +3182,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.20 build 20200408173844 
-Symbol Table                                                                                   Thu Dec 10 16:37:03 2020
+Symbol Table                                                                                   Fri Dec 11 16:30:40 2020
 
                              l13 07C8                               l14 07C8                               u10 0795  
                              u11 0794                               u20 079B                               u21 079A  

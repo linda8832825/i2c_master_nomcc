@@ -1577,11 +1577,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 10:     I2C_Master_Start();
 [e ( _I2C_Master_Start ..  ]
 "11
-[; ;main.c: 11:     I2C_Master_Write((0x50 << 1)|0);
-[e ( _I2C_Master_Write (1 -> | << -> 80 `i -> 1 `i -> 0 `i `uc ]
+[; ;main.c: 11:     I2C_Master_Write((0x3A << 1)|0);
+[e ( _I2C_Master_Write (1 -> | << -> 58 `i -> 1 `i -> 0 `i `uc ]
 "12
-[; ;main.c: 12:     I2C_Master_Write(0xAA);
-[e ( _I2C_Master_Write (1 -> -> 170 `i `uc ]
+[; ;main.c: 12:     I2C_Master_Write(0xDB);
+[e ( _I2C_Master_Write (1 -> -> 219 `i `uc ]
 "13
 [; ;main.c: 13:     I2C_Master_Stop();
 [e ( _I2C_Master_Stop ..  ]
