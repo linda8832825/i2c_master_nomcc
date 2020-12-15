@@ -1,4 +1,5 @@
 #include <xc.h>
+#include "i2c_master.h"
 
 void I2C_Master_Wait(){
     while ((SSP1STAT & 0x04) || (SSP1CON2 & 0x1F));

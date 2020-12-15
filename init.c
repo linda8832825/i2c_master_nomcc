@@ -49,16 +49,16 @@ void PIN_MANAGER_Initialize(void)
     /**
     TRISx registers
     */
-    TRISA = 0xFD;
+    TRISA = 0x00;
     TRISB = 0xFF;
     TRISC = 0xFF;
 
     /**
     ANSELx registers
     */
-    ANSELC = 0xE7;
+    ANSELC = 0xE7;//RC3 RC4設為數位
     ANSELB = 0xFF;
-    ANSELA = 0xFD;
+    ANSELA = 0x00;//PORTA 設為數位
 
     /**
     WPUx registers
@@ -85,18 +85,11 @@ void PIN_MANAGER_Initialize(void)
     /**
     INLVLx registers
     */
-    INLVLA = 0xFF;
+    INLVLA = 0x00;
     INLVLB = 0xFF;
     INLVLC = 0xFF;
     INLVLE = 0x08;
 
-
-
-
-
-   
-    
-	
     SSP1CLKPPS = 0x13;   //RC3->MSSP1:SCL1;    
     RC3PPS = 0x14;   //RC3->MSSP1:SCL1;    
     RC4PPS = 0x15;   //RC4->MSSP1:SDA1;    
