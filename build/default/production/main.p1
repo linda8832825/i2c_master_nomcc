@@ -12,6 +12,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8
 [; ;./i2c_master.h: 8: void I2C_Master_Stop(void);
 [v _I2C_Master_Stop `(v ~T0 @X0 0 ef ]
+"10
+[; ;./i2c_master.h: 10: uint8_t I2C_Master_Read(uint8_t get);
+[v _I2C_Master_Read `(uc ~T0 @X0 0 ef1`uc ]
+"39536 C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h
+[; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 39536: extern volatile __bit RA1 __attribute__((address(0x61)));
+[v _RA1 `Vb ~T0 @X0 0 e@97 ]
 "55 C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1563,8 +1569,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "34907
 [; ;C:/Users/linda/.mchp_packs/Microchip/PIC16F1xxxx_DFP/1.5.133/xc8\pic\include\proc\pic16f18854.h: 34907: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
+"7 main.c
+[; ;main.c: 7: uint8_t slave_feedback;
+[v _slave_feedback `uc ~T0 @X0 1 e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"8 main.c
+"8
 [; ;main.c: 8: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
@@ -1585,13 +1594,40 @@ Version 4.0 HI-TECH Software Intermediate Code
 "13
 [; ;main.c: 13:     I2C_Master_Stop();
 [e ( _I2C_Master_Stop ..  ]
-"14
-[; ;main.c: 14:     while(1);
-[e :U 1564 ]
-[e :U 1563 ]
-[e $U 1564  ]
-[e :U 1565 ]
 "15
-[; ;main.c: 15: }
+[; ;main.c: 15:     I2C_Master_Start();
+[e ( _I2C_Master_Start ..  ]
+"16
+[; ;main.c: 16:     I2C_Master_Write((0x3A << 1)|1);
+[e ( _I2C_Master_Write (1 -> | << -> 58 `i -> 1 `i -> 1 `i `uc ]
+"17
+[; ;main.c: 17:     slave_feedback=I2C_Master_Read(0);
+[e = _slave_feedback ( _I2C_Master_Read (1 -> -> 0 `i `uc ]
+"18
+[; ;main.c: 18:     I2C_Master_Stop();
+[e ( _I2C_Master_Stop ..  ]
+"19
+[; ;main.c: 19:     if(slave_feedback==0xDB){
+[e $ ! == -> _slave_feedback `i -> 219 `i 1563  ]
+{
+"20
+[; ;main.c: 20:         RA1=1;
+[e = _RA1 -> -> 1 `i `b ]
+"21
+[; ;main.c: 21:     }
+}
+[e :U 1563 ]
+"22
+[; ;main.c: 22:     while(1){
+[e :U 1565 ]
+{
+"24
+[; ;main.c: 24:     }
+}
+[e :U 1564 ]
+[e $U 1565  ]
+[e :U 1566 ]
+"25
+[; ;main.c: 25: }
 [e :UE 1562 ]
 }
